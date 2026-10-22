@@ -1,0 +1,9 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<style>body{font:13px/1.5 system-ui, sans-serif;padding:14px;min-width:280px;max-width:340px;color:#222}h3{margin:0 0 8px}p{margin:5px 0}button{margin-top:10px;padding:7px 10px}small{color:#666}#binding{font-weight:600}</style>
+</head><body><h3>Controller Loop 无焦点 Bridge</h3><p id="relay">正在检测回环服务…</p>
+<p id="tab">正在检测目标聊天页…</p><p id="mode">正在检查投递模式…</p>
+<small>检查不会发送消息，也不会切换浏览器标签页。</small>
+<button id="refresh">检测并连接目标标签页</button>
+<hr><small>若更换了 Controller 对话，请先切到本项目的新 ChatGPT 对话，再点击下面的按钮。仅同一项目、且没有待处理事件时允许绑定；绑定本身不会发送消息。</small>
+<button id="rebind">将当前项目对话绑定为 Controller</button>
+<p id="binding" aria-live="polite"></p><script src="popup.js"></script></body></html>

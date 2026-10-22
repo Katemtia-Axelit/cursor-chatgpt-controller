@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cursor-controller-task-envelope-v0.schema.json",
+  "title": "Cursor Controller Task Envelope v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "task_id",
+    "task_token",
+    "workspace",
+    "mode",
+    "chat",
+    "mutation",
+    "subagent_policy",
+    "handoff_policy",
+    "prompt"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "task_id": { "type": "string", "minLength": 1 },
+    "task_token": {
+      "type": "string",
+      "minLength": 8,
+      "pattern": "^[A-Za-z0-9_.:-]+$"
+    },
+    "workspace": { "type": "string", "minLength": 1 },
+    "mode": {
+      "type": "string",
+      "enum": ["Agent", "Ask", "Plan", "Debug"]
+    },
+    "chat": { "const": "NEW" },
+    "mutation": {
+      "type": "string",
+      "enum": ["ALLOW", "READ_ONLY"]
+    },
+    "subagent_policy": { "const": "DENY_INTERNAL" },
+    "handoff_policy": { "const": "HISTORICAL_BY_TASK_TOKEN" },
+    "parallel_group": {
+      "type": ["string", "null"]
+    },
+    "integration_owner": {
+      "type": ["string", "null"]
+    },
+    "acceptance": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "prompt": { "type": "string", "minLength": 1 },
+    "created_at": { "type": ["string", "null"] }
+  }
+}

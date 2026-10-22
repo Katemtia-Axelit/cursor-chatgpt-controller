@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "task_token": "EXAMPLE_CONTROLLER_TASK_0001",
+  "task_id": "EXAMPLE-CONTROLLER-TASK",
+  "batch_id": "EXAMPLE_BATCH_0001",
+  "batch_title": "Example only batch for reviewing synthetic code task contracts",
+  "create_batch_if_missing": true,
+  "purpose": "Example only: add an isolated regression test to a synthetic workspace without modifying existing runtime modules",
+  "model_profile": {
+    "model": "Claude Opus 5.5",
+    "context": "300K",
+    "reasoning": "Medium",
+    "fast": true
+  },
+  "mutation": "ALLOW",
+  "allowed_write_files": [
+    "tests/characterize/test_example.py"
+  ],
+  "deliverables": [
+    "tests/characterize/test_example.py"
+  ],
+  "max_tool_calls": 20,
+  "max_debug_cycles": 1
+}

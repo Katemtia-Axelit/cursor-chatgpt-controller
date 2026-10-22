@@ -1,0 +1,13 @@
+{
+  "name": "cursor-chatgpt-controller-infrastructure",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sanitized reference snapshot of a local Cursor/ChatGPT task dispatch and review loop",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "check": "node --check controller-dispatch-task.js",
+    "test": "node --test tests/smoke.test.js"
+  }
+}
